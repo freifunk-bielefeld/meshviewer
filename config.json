@@ -3,15 +3,24 @@
 {
   // String or array of data provider are supported
   "dataPath": "data/",
-  "siteName": "Freifunk Um",
+  "siteName": "Freifunk Bielefeld",
   "mapLayers": [
     {
-      "name": "OSM Mapnik",
-      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "name": "OpenStreetMap",
+      "url": "http://tiles.freifunk-bielefeld.de/{z}/{x}/{y}.png",
       "config": {
-        "subdomains": "abc",
+        "subdomains": "1234",
         "type": "osm",
-        "attribution": "Map data Tiles &copy; <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors, CC-BY-SA",
+        "attribution": "Tiles &copy; Openstreetmap |&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+        "maxZoom": 18
+      }
+    },
+    { "name": "MapQuest",
+      "url": "https://otile{s}-s.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg",
+      "config": {
+        "subdomains": "1234",
+        "type": "osm",
+        "attribution": "Tiles &copy; <a href=\"https://www.mapquest.com/\" target=\"_blank\">MapQuest</a>, Data CC-BY-SA OpenStreetMap",
         "maxZoom": 18
       }
     }
@@ -20,17 +29,26 @@
   "fixedCenter": [
     // Northwest
     [
-      48.6910,
-      9.3040
+      52.334080,
+      8.302231
     ],
     // Southeast
     [
-      48.0267,
-      10.6760
+      51.951037,
+      9.157791
     ]
   ],
   "siteNames": [
-    { "site": "ulm", "name": "Ulm", "link" : "https://www.freifunk-ulm.de" },
-    { "site": "ostallgaeu", "name": "Ostallgäu", "link": "http://freifunk-ostallgaeu.de"}
+    { "site" : "bielefeld", "name": "Bielefeld", "link" : "http://freifunk-bielefeld.de" },
+    { "site" : "obernkirchen", "name": "Obernkirchen", "link" : "http://www.freifunk-obernkirchen.de" },
+    { "site" : "badoeynhausen", "name": "Bad Oeynhausen", "link" : "https://www.freifunk-badoeynhausen.de" },
+    { "site" : "minden", "name": "Minden", "link" : "http://www.freifunk-minden.de" },
+    { "site" : "herford", "name": "Herford", "link" : "http://herford.freifunk.net" },
+    { "site" : "bad-pyrmont", "name": "Bad-Pyrmont" },
+    { "site" : "rinteln", "name": "Rinteln" },
+    { "site" : "loehne", "name": "Löhne" },
+    { "site" : "hildesheim", "name": "Hildesheim", "link" : "http://freifunk-hi.de" },
+    { "site" : "lemgo", "name" : "Lemgo", "link" : "https://www.freifunk-lemgo.de" },
+    { "site" : "lage", "name": "Lage" }
   ]
 }
